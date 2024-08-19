@@ -72,21 +72,7 @@ internal class Usuario
 
     public void EmprestarLivro(List<Livro> livros)
     {
-        Console.Write("Nome: ");
-        string nome = Console.ReadLine()!;
-        Nome = nome;
-
-        Console.Write("CPF: ");
-        string cpf = Console.ReadLine()!;
-        int mensagemCadastro = CadastrarCpf(cpf);
-
-        if (mensagemCadastro == -1)
-        {
-            Console.WriteLine("CPF inválido.");
-            return;
-        }
-
-        Console.Write($"Quantidade de livros para serem emprestados para {nome} (No máximo 3 livros): ");
+        Console.Write($"Quantidade de livros para serem emprestados para {Nome} (No máximo 3 livros): ");
         int quantidade = int.Parse(Console.ReadLine()!);
 
         for (int i = 0; i < livros.Count; i++)
